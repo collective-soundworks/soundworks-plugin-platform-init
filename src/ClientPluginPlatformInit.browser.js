@@ -1,5 +1,5 @@
 import { ClientPlugin } from '@soundworks/core/client.js';
-import NoSleep from 'nosleep.js';
+import NoSleep from '@zakj/no-sleep';
 import MobileDetect from 'mobile-detect';
 // default built-in definition
 import defaultDefinitions from './default-definitions.js';
