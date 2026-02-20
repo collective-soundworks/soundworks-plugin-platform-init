@@ -1,4 +1,4 @@
-import NoSleep from '@zakj/no-sleep';
+import NoSleep from 'nosleep.js';
 import MobileDetect from 'mobile-detect';
 // default built-in definition
 import defaultDefinitions from './default-definitions.js';
@@ -83,6 +83,8 @@ const pluginFactory = function(Plugin) {
       this._startPromiseResolve = null;
       this._startPromiseReject = null;
       this._features = new Map();
+
+      this.noSleep = new NoSleep();
     }
 
     /**
@@ -194,8 +196,10 @@ cf. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes`);
       // so let's consider it is a problem of the application.
       //
       // -------------------------------------------------------------
-      const noSleep = new NoSleep();
-      noSleep.enable();
+      this.noSleep.enable()
+        .then(() => console.log('NoSleep is active.'))
+        .catch((error) => console.error('NoSleep failed to activate:', error))
+        ;
 
       // note (24/09/2021) - Safari > 14 does not allow any async calls before
       // accesing deviceMotion.requestPermission, so all initialize should be
