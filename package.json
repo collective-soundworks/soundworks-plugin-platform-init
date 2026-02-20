@@ -41,8 +41,8 @@
   "homepage": "https://soundworks.dev",
   "dependencies": {
     "@ircam/sc-utils": "^1.9.0",
-    "@zakj/no-sleep": "^0.13.6",
-    "mobile-detect": "^1.3.7"
+    "mobile-detect": "^1.3.7",
+    "nosleep.js": "^0.12.0"
   },
   "devDependencies": {
     "@ircam/eslint-config": "^2.0.1",
