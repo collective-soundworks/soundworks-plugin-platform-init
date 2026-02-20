@@ -1,4 +1,4 @@
-import NoSleep from 'nosleep.js';
+import NoSleep from '@marsgames/nosleep.js';
 import MobileDetect from 'mobile-detect';
 // default built-in definition
 import defaultDefinitions from './default-definitions.js';
