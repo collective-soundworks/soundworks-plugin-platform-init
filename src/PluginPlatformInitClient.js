@@ -83,8 +83,6 @@ const pluginFactory = function(Plugin) {
       this._startPromiseResolve = null;
       this._startPromiseReject = null;
       this._features = new Map();
-
-      this.noSleep = new NoSleep();
     }
 
     /**
@@ -196,6 +194,7 @@ cf. https://developers.google.com/web/updates/2017/09/autoplay-policy-changes`);
       // so let's consider it is a problem of the application.
       //
       // -------------------------------------------------------------
+      this.noSleep = new NoSleep();
       this.noSleep.enable()
         .then(() => console.log('NoSleep is active.'))
         .catch((error) => console.error('NoSleep failed to activate:', error))
