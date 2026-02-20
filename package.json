@@ -1,6 +1,6 @@
 {
   "name": "@soundworks/plugin-platform-init",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "description": "soundworks plugin to simplify initialization of certain client features",
   "authors": [
     "Benjamin Matuszewski"
